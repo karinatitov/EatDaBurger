@@ -5,7 +5,7 @@ var burger = {
         orm.selectAll("burger", function (res) {
             cb(res);
         });
-        console, log(res);
+       // console.log(res);
     },
 
     createOne: function (cols, vals, cb) {
