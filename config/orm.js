@@ -14,7 +14,7 @@ function printQuestionMarks(num) {
 
 var orm = {
 
-    all: function (tableInput, cb) {
+    selectAll: function (tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
             if (err) throw err;
@@ -23,7 +23,7 @@ var orm = {
         });
     },
 
-    create: function (table, cols, vals, cb) {
+    insertOne: function (table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
 
         querySrtring += "(";
@@ -43,7 +43,7 @@ var orm = {
         });
     },
 
-    update: function (table, objColVals, condition, cb) {
+    updateOne: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
         queryString += " SET ";
@@ -61,20 +61,6 @@ var orm = {
         });
     },
 
-
-    delete: function (table, condition, cb) {
-        var queryString = "DELETE FROM " + table;
-        queryString += " WHERE ";
-        queryString += condition;
-
-        connection.query(queryString, function (err, result) {
-            if (err) {
-                throw err;
-            }
-
-            cb(result);
-        });
-    }
 }
 
 // Export the orm object for the model (burgers.js)
