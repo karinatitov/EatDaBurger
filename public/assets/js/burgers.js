@@ -24,7 +24,7 @@
             let button = $('<button>').text('Devour').addClass('updateMe').attr('data-id', burger.id).attr('data-devour', newBurger.devoured);
 
             $(li).append(p, button);
-            $('#toEat').prepend(li);
+            $('#toEat').append(li);
             $('#burgerInput').val('')
         })
     }
@@ -62,6 +62,6 @@
                 
             })
         }
-        location.reload();
+       //  location.reload();
     })
 // })
