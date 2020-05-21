@@ -1,0 +1,29 @@
+body, .jumbotron {
+    background-image: url("../img/slate-background.jpg");
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 120px;
+    color: blanchedalmond;
+}
+
+h4, p {
+    color: blanchedalmond; 
+}
+
+p {
+    font-size: 26px;
+}
+
+button {
+    background-color: blanchedalmond;
+}
+img {
+    width: 150px;
+    height: 200px;
+    margin-left: 42%;
+}
+

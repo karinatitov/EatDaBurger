@@ -21,7 +21,7 @@ function createBurger() {
         //dynamically creates devour buttons for newly added burgers
         let li = $('<li>');
         let p = $('<p>').text(newBurger.burger_name);
-        let button = $('<button>').text('Devour').addClass('updateMe').attr('data-id', burger.id).attr('data-devour', newBurger.devoured);
+        let button = $('<button>').text('Devour').addClass('updateMe').attr('data-id', burger.id).attr('data-devour', newBurger.devoured).css('float', "left");
 
         $(li).append(p, button);
         $('#toEat').append(li);
